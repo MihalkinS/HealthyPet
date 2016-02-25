@@ -76,17 +76,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\foo2Ctrl.js" />
+    <Content Include="app\controllers\fooCtrl.js" />
+    <Content Include="app\controllers\calendarCtrl.js" />
+    <Content Include="app\controllers\indexCtrl.js" />
     <Content Include="app\lib\angular-route.min.js" />
     <Content Include="app\lib\angular.min.js" />
-    <Content Include="app\lib\bootstrap.css" />
+    <Content Include="content\css\bootstrap.css" />
+    <Content Include="content\css\myStyle.css" />
+    <Content Include="content\img\Белохалатов.jpg" />
+    <Content Include="content\img\Твердорукова.jpg" />
+    <Content Include="views\foo.html" />
+    <Content Include="views\foo2.html" />
     <Content Include="views\index.html" />
+    <Content Include="views\calendar.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\controllers\" />
     <Folder Include="app\directives\" />
     <Folder Include="app\services\" />
   </ItemGroup>

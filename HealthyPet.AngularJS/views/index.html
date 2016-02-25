@@ -3,48 +3,45 @@
 <head>
     <title>HealthyPet</title>
 	<meta charset="utf-8" />
-    <link href="../app/lib/bootstrap.css" rel="stylesheet" />
+    <link href="../content/css/bootstrap.css" rel="stylesheet" />
+    <link href="../content/css/myStyle.css" rel="stylesheet" />
 </head>
-<body ng-controller="testCtrl">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+<body ng-controller="indexCtrl">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Healthy Pet</a>
-            </div>
-                
+                <a class="navbar-brand" href="#/main">Healthy Pet</a>
+            </div>        
+            <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><span class="navbar-text ng-hide" ng-show="inrole"><b>{{user.name}}</b>(Администратор)</span></li>
-                    <li><a href="#" ng-show="inrole" class="ng-hide">Выйти</a><a href="#" ng-hide="inrole">Войти</a></li>
+                    <li class="navbar-text" ng-hide="logout">
+                        <span><b>{{user.name}}</b>(Администратор)</span>
+                    </li>
+                    <li>
+                        <a href="" ng-show="logout">Регистрация</a>
+                    </li>
+
+                    <li>
+                        <a href="" ng-hide="logout">Выйти</a>
+                        <a href="" ng-show="logout">Войти</a>
+                    </li>
                 </ul>
-            </div>
-    </nav>
-    <br />
-    <br />
-    <br />
-    <button ng-click='onOffRole()'>ON/OFF Role</button>
-            <ng-view></ng-view>
-            
-            <script src="../app/lib/angular.min.js"></script>
-            <script src="../app/lib/angular-route.min.js"></script>
-            <script src="../app/app.js"></script>
-            <script>
-                var vetApp = angular.module('vetApp', []).controller('testCtrl', function ($scope) {
-                    
-                    $scope.onOffRole = function () {
-                        if ($scope.inrole === true) {
-                            $scope.inrole = false;
-                            $scope.user = {
-                                name: ''
-                            }
-                        }
-                        else {
-                            $scope.inrole = true;
-                            $scope.user = {
-                                name: 'антон'
-                            }
-                        }
-                    }
-                });
-            </script>
+            </div>    
+        </div>
+    </div>
+
+
+
+    
+     <ng-view></ng-view>
+
+   <!-- <button ng-click='onOffRole()'>ON/OFF Role</button> -->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../app/lib/angular.min.js"></script>
+    <script src="../app/lib/angular-route.min.js"></script>
+    <script src="../app/app.js"></script>
+    <script src="../app/controllers/indexCtrl.js"></script>
+    <script src="../app/controllers/calendarCtrl.js"></script>            
 </body>
 </html>
